@@ -11,6 +11,7 @@
     },
     mounted: function () {
       console.log(this.$router)
+      console.log('123')
     }
   }
 </script>
