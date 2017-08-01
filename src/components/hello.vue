@@ -11,7 +11,11 @@
     },
     mounted: function () {
       console.log(this.$router)
+<<<<<<< HEAD
       console.log('123')
+=======
+      console.log('23rsf')
+>>>>>>> fan
     }
   }
 </script>
