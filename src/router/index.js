@@ -1,6 +1,6 @@
 
 import App from './../App'
-import Hello from '@/components/Hello'
+const layout = r => require.ensure([], () => r(require('@/components/layout.vue')), 'layout')
 export default [
   {
     path: '/',
@@ -8,7 +8,7 @@ export default [
     children: [
       {
         path: '',
-        component: Hello
+        component: layout
       }
     ]
   }

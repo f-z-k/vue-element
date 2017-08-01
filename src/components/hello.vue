@@ -11,10 +11,6 @@
     },
     mounted: function () {
       console.log(this.$router)
-      console.log('123')
-      console.log('23rsf')
-      console.log('123123')
-      console.log('-----')
     }
   }
 </script>
