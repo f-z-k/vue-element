@@ -2,13 +2,13 @@ export default {
   menuList: [
     {
       title: {
-        name: '导航一',
+        name: '饿了吗组件用法',
         icon: 'el-icon-message'
       },
       child: [
         {
-          name: '选项一',
-          path: '',
+          name: '表格控件',
+          path: 'table',
           icon: ''
         },
         {

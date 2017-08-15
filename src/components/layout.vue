@@ -3,17 +3,26 @@
     height:100%;
   }
   .main-box{
-    overflow: hidden;
+    /*overflow: hidden;
     display: flex;
-    height:100%;
+    height:100%;*/
+    width:100%;
+    /*display: flex;*/
+    position: absolute;
+    top: 70px;
+    bottom: 0px;
+    overflow: hidden;
   }
   .main-menu{
-    flex:0 0 230px;
-    width: 230px;
+    /*flex:0 0 230px;*/
+    float:left;
   }
   .main-content{
-    height:100%;
-    flex: 1;
+    /*flex: 1;
+    overflow-y: scroll;
+    padding: 20px;*/
+    margin-left:200px;
+    padding:20px;
   }
 </style>
 <template>
@@ -43,4 +52,3 @@
     }
   }
 </script>
-

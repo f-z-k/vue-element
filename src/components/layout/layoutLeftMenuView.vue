@@ -4,6 +4,7 @@
   }
   .menu-box{
     width: 200px;
+    height:100%;
   }
 </style>
 <template>
@@ -35,7 +36,7 @@
           <el-submenu :index="index" v-for="(item, index) in menuLists" :key="index">
             <template slot="title"><i :class="item.title.icon"></i>{{ item.title.name }}</template>
             <el-menu-item-group>
-              <el-menu-item index="e" v-for="(items, indexs) in item.child" :key="indexs">{{ items.name }}</el-menu-item>
+              <el-menu-item :index=items.path v-for="(items, indexs) in item.child" :key="indexs">{{ items.name }}</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -57,5 +58,3 @@
     }
   }
 </script>
-
-

@@ -1,15 +1,20 @@
 
-import App from './../App'
+// import App from './../App'
 const layout = r => require.ensure([], () => r(require('@/components/layout.vue')), 'layout')
+const table = r => require.ensure([], () => r(require('@/components/table/tableView.vue')), 'table')
 export default [
   {
-    path: '/',
-    component: App,
+    path: '/layout',
+    component: layout,
     children: [
       {
-        path: '',
-        component: layout
+        path: 'table',
+        component: table
       }
     ]
+  },
+  {
+    path: '/',
+    redirect: '/layout/table'
   }
 ]
