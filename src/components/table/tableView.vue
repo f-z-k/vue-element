@@ -12,6 +12,7 @@
 <template>
   <div>
     <el-table
+    v-loading="false"
     :data="tableData2"
     style="width: 100%"
     border
