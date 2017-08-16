@@ -5,6 +5,9 @@
   .el-table .positive-row {
     background: #e2f0e4;
   }
+  .page-box{
+    float: right;
+  }
 </style>
 <template>
   <div>
@@ -13,35 +16,41 @@
     style="width: 100%"
     border
     :row-class-name="tableRowClassName">
-    <el-table-column
-      prop="date"
-      label="日期"
-      width="180"
-      align="center">
-    </el-table-column>
-    <el-table-column
-      prop="name"
-      label="姓名"
-      width="180"
-      align="center">
-    </el-table-column>
-    <el-table-column
-      prop="address"
-      label="地址"
-      align="center">
-    </el-table-column>
-    <el-table-column label="操作" align="center">
-      <template scope="scope">
-        <el-button
-          size="small"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
-          size="small"
-          type="danger"
-          @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-      </template>
-    </el-table-column>
-  </el-table>
+      <el-table-column
+        prop="date"
+        label="日期"
+        width="180"
+        align="center">
+      </el-table-column>
+      <el-table-column
+        prop="name"
+        label="姓名"
+        width="180"
+        align="center">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="地址"
+        align="center">
+      </el-table-column>
+      <el-table-column label="操作" align="center">
+        <template scope="scope">
+          <el-button
+            size="small"
+            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-button
+            size="small"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+    <div class="page-box">
+      <el-pagination
+      layout="prev, pager, next"
+      :total="1000">
+      </el-pagination>
+    </div>
   </div>
 </template>
 <script>
@@ -78,6 +87,10 @@ export default {
         return 'positive-row'
       }
       return ''
+    },
+    handleEdit (a, b) {
+      console.log(a, b)
+      alert(a, b)
     }
   }
 }

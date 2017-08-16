@@ -12,8 +12,8 @@ export default {
           icon: ''
         },
         {
-          name: '选项二',
-          path: '',
+          name: 'form表单',
+          path: 'form',
           icon: ''
         }
       ]

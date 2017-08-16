@@ -11,7 +11,7 @@
   <div class="menu-box">
     <el-row class="el-row-box">
       <el-col :span="24" class="el-col-box">
-        <el-menu default-active="a" theme="dark"  unique-opened router class="el-menu-vertical-demo">
+        <el-menu default-active="table" theme="dark"  unique-opened router class="el-menu-vertical-demo">
           <!-- <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>导航一</template>
             <el-menu-item-group>
@@ -33,8 +33,8 @@
               <el-menu-item index="f">选项2</el-menu-item>
             </el-menu-item-group>
           </el-submenu> -->
-          <el-submenu :index="index" v-for="(item, index) in menuLists" :key="index">
-            <template slot="title"><i :class="item.title.icon"></i>{{ item.title.name }}</template>
+          <el-submenu :index="'menu'+index" v-for="(item, index) in menuLists" :key="index">
+            <template slot="title"><i :class="item.title.icon"></i>{{ item.title.name}}</template>
             <el-menu-item-group>
               <el-menu-item :index=items.path v-for="(items, indexs) in item.child" :key="indexs">{{ items.name }}</el-menu-item>
             </el-menu-item-group>
