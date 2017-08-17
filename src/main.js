@@ -5,11 +5,19 @@ import routes from './router/index'
 import ElementUI from 'element-ui'
 // import './../static/css/reset.css'
 import 'element-ui/lib/theme-default/index.css'
+import './../static/css/globleCss.css'
 Vue.use(VueRouter)
 Vue.use(ElementUI)
 const router = new VueRouter({
   mode: 'history',
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 /* eslint-disable no-new */
 new Vue({

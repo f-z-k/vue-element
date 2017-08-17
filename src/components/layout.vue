@@ -1,22 +1,30 @@
 <style scoped>
   .layout-box{
-    /*height:100%;*/
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
   }
   .main-box{
     width:100%;
     position: absolute;
     top: 70px;
     bottom: 0px;
-    overflow: hidden;
   }
   .main-menu{
     float:left;
   }
   .main-content{
-    margin-left:200px;
     padding:20px;
+    /* overflow-y: scroll; */
+    position: absolute;
+    top: 0px;
+    left:200px;
+    right:0px;
+    /* bottom:0px; */
   }
 </style>
+
 <template>
   <div class="layout-box">
     <!--  头部-->

@@ -20,17 +20,22 @@ export default {
     },
     {
       title: {
-        name: '导航二',
+        name: '常用插件',
         icon: 'el-icon-menu'
       },
       child: [
         {
-          name: '选项一',
-          path: '',
+          name: 'video.js',
+          path: 'video',
           icon: ''
         },
         {
-          name: '选项二',
+          name: 'swipter.js',
+          path: 'swiper',
+          icon: ''
+        },
+        {
+          name: 'cropper.js',
           path: '',
           icon: ''
         }

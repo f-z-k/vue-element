@@ -4,7 +4,9 @@
   }
   .menu-box{
     width: 200px;
-    height:100%;
+    position: fixed;
+    top:70px;
+    bottom:0px;
   }
 </style>
 <template>
