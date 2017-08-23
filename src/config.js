@@ -1,4 +1,6 @@
+// 项目中所需配置文件
 export default {
+  // 左侧菜单栏配置
   menuList: [
     {
       title: {
@@ -43,18 +45,18 @@ export default {
     },
     {
       title: {
-        name: '导航三',
+        name: 'vue自身',
         icon: 'el-icon-setting'
       },
       child: [
         {
-          name: '选项一',
-          path: '',
+          name: 'vuex',
+          path: 'vuex',
           icon: ''
         },
         {
-          name: '选项二',
-          path: '',
+          name: 'vue-resource',
+          path: 'http',
           icon: ''
         }
       ]
