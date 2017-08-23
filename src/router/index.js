@@ -7,7 +7,8 @@ const form = r => require.ensure([], () => r(require('@/components/form/formView
 const video = r => require.ensure([], () => r(require('@/components/video/videoView.vue')), 'video')
 const swiper = r => require.ensure([], () => r(require('@/components/swiper/swiperView.vue')), 'video')
 const vuex = r => require.ensure([], () => r(require('@/components/vuex/vuexView')), 'vuex')
-const http = r => require.ensure([], () => r(require('@/components/http/httpView')), 'vuex')
+const http = r => require.ensure([], () => r(require('@/components/http/httpView')), 'http')
+const i18n = r => require.ensure([], () => r(require('@/components/i18n/i18nView')), 'http')
 export default [
   {
     path: '/layout',
@@ -40,6 +41,10 @@ export default [
       {
         path: 'http',
         component: http
+      },
+      {
+        path: 'i18n',
+        component: i18n
       }
     ]
   },

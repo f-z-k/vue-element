@@ -58,6 +58,11 @@ export default {
           name: 'vue-resource',
           path: 'http',
           icon: ''
+        },
+        {
+          name: 'vue-I18n',
+          path: 'i18n',
+          icon: ''
         }
       ]
     }

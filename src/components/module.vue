@@ -3,6 +3,7 @@
 </style>
 <template>
   <div>
+    <p>此项目主要是列举平时常见的成熟解决方案，后续开发直接引用就行</p>
     <p>vue模板结构，新建.vue文件时复制粘贴，项目开发完成删除即可</p>
     <p>模板是在vue-cli 脚手架的基础上根据自身项目需求做的改动</p>
     <h2>项目说明如下如下：</h2>
@@ -20,6 +21,11 @@
         <div>请求引入的是vue-resource</div>
         <div>项目中的api文件夹中方的就是数据层，做到数据层与逻辑层分离</div>
         <div>api.js就是请求层，config.js就是接口配置信息</div>
+      </li>
+      <li>
+        <div>多语言处理-vue-I18n</div>
+        <div>vue-i18n@5.x和 饿了吗兼容，其他版本开发比较复杂</div>
+        <div></div>
       </li>
     </ol>
   </div>
