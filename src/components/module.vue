@@ -4,7 +4,7 @@
 <template>
   <div>
     <p>此项目主要是列举平时常见的成熟解决方案，后续开发直接引用就行</p>
-    <p>vue模板结构，新建.vue文件时复制粘贴，项目开发完成删除即可</p>
+    <p>module.vue是模板结构，新建.vue文件时复制粘贴，项目开发完成删除即可</p>
     <p>模板是在vue-cli 脚手架的基础上根据自身项目需求做的改动</p>
     <h2>项目说明如下如下：</h2>
     <ol>
@@ -25,7 +25,12 @@
       <li>
         <div>多语言处理-vue-I18n</div>
         <div>vue-i18n@5.x和 饿了吗兼容，其他版本开发比较复杂</div>
-        <div></div>
+        <div>详细用法参考main.js</div>
+      </li>
+      <li>
+        <div>Vue-router 懒加载</div>
+        <div>babel-polyfill修复低版本内核不支持es6语法</div>
+        <div>注意：只需安装到开发依赖</div>
       </li>
     </ol>
   </div>

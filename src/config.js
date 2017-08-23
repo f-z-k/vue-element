@@ -4,18 +4,31 @@ export default {
   menuList: [
     {
       title: {
+        name: '项目说明',
+        icon: 'el-icon-document'
+      },
+      child: [
+        {
+          name: '.vue模板',
+          path: '/layout/module',
+          icon: ''
+        }
+      ]
+    },
+    {
+      title: {
         name: '饿了吗组件用法',
         icon: 'el-icon-message'
       },
       child: [
         {
           name: '表格控件',
-          path: 'table',
+          path: '/layout/table',
           icon: ''
         },
         {
           name: 'form表单',
-          path: 'form',
+          path: '/layout/form',
           icon: ''
         }
       ]
@@ -28,17 +41,17 @@ export default {
       child: [
         {
           name: 'video.js',
-          path: 'video',
+          path: '/layout/video',
           icon: ''
         },
         {
           name: 'swipter.js',
-          path: 'swiper',
+          path: '/layout/swiper',
           icon: ''
         },
         {
           name: 'cropper.js',
-          path: '',
+          path: '/layout/cropper',
           icon: ''
         }
       ]
@@ -51,17 +64,17 @@ export default {
       child: [
         {
           name: 'vuex',
-          path: 'vuex',
+          path: '/layout/vuex',
           icon: ''
         },
         {
           name: 'vue-resource',
-          path: 'http',
+          path: '/layout/http',
           icon: ''
         },
         {
           name: 'vue-I18n',
-          path: 'i18n',
+          path: '/layout/i18n',
           icon: ''
         }
       ]
