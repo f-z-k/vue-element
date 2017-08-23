@@ -10,7 +10,10 @@
     <ol>
       <li>
         <div>版本号添加</div>
-        <div>node接收打包变量&&上线脚本-例子：sh line.sh v1.1</div>
+        <div>node接收打包变量 npm run build v1.1</div>
+        <div>这样做的问题：</div>
+        <div>img 标签src路径打包是不会添加上版本号，解决方法，在版本文件夹外层在</div>
+        <div>单独复制出一份static文件</div>
       </li>
       <li>
         <div>分离接口请求线上&&测试环境,两种方法</div>
@@ -19,17 +22,20 @@
       </li>
       <li>
         <div>请求引入的是vue-resource</div>
+        <div>目前vue-resource已经停止更新，但是我们还是用vue-resource的原因是我们的后端接口都是</div>
+        <div>跨域请求，vue官方推荐的是axios但是它没jsonp方法</div>
         <div>项目中的api文件夹中方的就是数据层，做到数据层与逻辑层分离</div>
         <div>api.js就是请求层，config.js就是接口配置信息</div>
       </li>
       <li>
         <div>多语言处理-vue-I18n</div>
         <div>vue-i18n@5.x和 饿了吗兼容，其他版本开发比较复杂</div>
+        <div>iview 也是一样必须用5版本</div>
         <div>详细用法参考main.js</div>
       </li>
       <li>
         <div>Vue-router 懒加载</div>
-        <div>babel-polyfill修复低版本内核不支持es6语法</div>
+        <div>babel-polyfill修复低版本浏览器内核不支持es6语法</div>
         <div>注意：只需安装到开发依赖</div>
       </li>
     </ol>
