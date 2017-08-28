@@ -51,7 +51,7 @@
     <h2>项目目录说明</h2>
     <ol>
       <li>
-        <div>api</div>
+        <div>api(service 模块)</div>
         <div>数据请求层，api.js数据请求处理，config.js接口配置信息</div>
       </li>
       <li>

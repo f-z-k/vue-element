@@ -7,5 +7,7 @@ if (process.env.NODE_ENV === 'development') {
   root = 'http://localhost:3000'
 }
 export default {
-  getToken: root + '/userinfo' // 获取微信token
+  getName: root + '/userinfo', // 测试
+  getInfo: root + '/users/info', // 测试
+  getOneInfo: root + '/users/oneInfo' // 测试
 }
