@@ -15,6 +15,7 @@
   import 'cropper/dist/cropper.min.css'
   import 'cropper'
   import $ from 'jquery'
+  import { getToken } from './../../api/api'
   export default {
     data: function () {
       return {
@@ -55,6 +56,19 @@
         console.log(croppedCanvas.toDataURL())
         // var rectCanvas = $('.container > img').cropper.getRectCanvas(croppedCanvas)
         $('.imgcropper')[0].src = croppedCanvas.toDataURL()
+        var dataBase = croppedCanvas.toDataURL()
+        var data = {
+          device_id: '638da3194c8e97327f44ce47743e0835',
+          HTTP_API_VERSION: 4.1
+        }
+        getToken(data).then(res => {
+          console.log(res.token)
+          this.$http.post('http://upload.qiniu.com', {params: dataBase, headers: {'Content-Type': 'application/octet-stream', 'Authorization': 'UpToken' + res.token}}).then(data => {
+            console.log(data)
+          }, error => {
+            console.log(error)
+          })
+        })
       }
     }
   }

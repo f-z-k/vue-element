@@ -27,6 +27,7 @@ export const getUserInfo = () => {
     return res
   })
 }
+export const getToken = params => { return _http(config.getToken, params) }
 export const getInfo = () => { return Vue.http.jsonp(config.getInfo).then(res => res.data) }
 export const getOneInfo = params => { return Vue.http.jsonp(config.getOneInfo, {params: params}).then(res => res.data) }
 

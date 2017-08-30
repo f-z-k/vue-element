@@ -9,5 +9,6 @@ if (process.env.NODE_ENV === 'development') {
 export default {
   getName: root + '/userinfo', // 测试
   getInfo: root + '/users/info', // 测试
-  getOneInfo: root + '/users/oneInfo' // 测试
+  getOneInfo: root + '/users/oneInfo', // 测试
+  getToken: 'http://api.talkmate.com/utlcc/get_token'
 }
