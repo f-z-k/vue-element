@@ -5,6 +5,7 @@ import routes from './router/index'
 import ElementUI from 'element-ui'
 import store from './store/index'
 import bus from './bus'
+import VueResource from 'vue-resource'
 import 'element-ui/lib/theme-default/index.css'
 import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
@@ -14,11 +15,19 @@ import langs from './vueI18/locale'
 Vue.use(VueRouter)
 Vue.use(ElementUI)
 Vue.use(VueI18n)
+Vue.use(VueResource)
 // 多语言处理
-console.log(enLocale)
-console.log(zhLocale)
-console.log(langs)
-Vue.config.lang = 'zh-cn'
+
+const navLang = navigator.language // 检测系统语言
+// const localLang = (navLang === 'zh-CN' || navLang === 'en-US') ? navLang : false
+var localLang = ''
+if (navLang === 'zh-CN') {
+  localLang = 'zh-cn'
+} else {
+  localLang = 'en'
+}
+const _lang = window.localStorage.getItem('language') || localLang || 'zh-cn'
+Vue.config.lang = _lang
 // 饿了吗语言包和项目自身语言包合并
 const mergeZH = Object.assign(zhLocale, langs['chinese']['zh-CN'])
 const mergeEN = Object.assign(enLocale, langs['english']['en-US'])
@@ -27,6 +36,7 @@ Vue.locale('en', mergeEN)
 // 监控语言切换
 bus.$on('chang-langs', function (type) {
   Vue.config.lang = type
+  window.localStorage.setItem('language', type)
 })
 const router = new VueRouter({
   mode: 'history',

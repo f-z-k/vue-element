@@ -47,11 +47,14 @@
         <div>babel-polyfill修复低版本浏览器内核不支持es6语法</div>
         <div>注意：只需安装到开发依赖</div>
       </li>
+      <li>
+        <div>线上过滤console.log</div>
+      </li>
     </ol>
     <h2>项目目录说明</h2>
     <ol>
       <li>
-        <div>api</div>
+        <div>api(service 模块)</div>
         <div>数据请求层，api.js数据请求处理，config.js接口配置信息</div>
       </li>
       <li>

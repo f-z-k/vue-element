@@ -9,6 +9,7 @@ const swiper = r => require.ensure([], () => r(require('@/components/swiper/swip
 const vuex = r => require.ensure([], () => r(require('@/components/vuex/vuexView')), 'vuex')
 const http = r => require.ensure([], () => r(require('@/components/http/httpView')), 'http')
 const i18n = r => require.ensure([], () => r(require('@/components/i18n/i18nView')), 'http')
+const cropper = r => require.ensure([], () => r(require('@/components/cropper/cropper')), 'http')
 export default [
   {
     path: '/layout',
@@ -45,6 +46,10 @@ export default [
       {
         path: 'i18n',
         component: i18n
+      },
+      {
+        path: 'cropper',
+        component: cropper
       }
     ]
   },
