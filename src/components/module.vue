@@ -104,7 +104,6 @@
     mounted: function () {
       console.log(this.$msg)
       this.$msg('你好！')
-      console.log('测试')
     },
     methods: {
       changImg: function () {
