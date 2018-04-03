@@ -85,6 +85,7 @@
         <div>项目中的静态资源js\img\css</div>
       </li>
     </ol>
+    <prompt-box></prompt-box>
   </div>
 </template>
 <script>
@@ -101,6 +102,8 @@
     watch: {
     },
     mounted: function () {
+      console.log(this.$msg)
+      this.$msg('你好！')
     },
     methods: {
       changImg: function () {

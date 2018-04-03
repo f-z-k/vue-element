@@ -5,10 +5,12 @@ import routes from './router/index'
 import ElementUI from 'element-ui'
 import store from './store/index'
 import bus from './bus'
+import prompt from './components/prompt/prompt.vue'
 import VueResource from 'vue-resource'
 import 'element-ui/lib/theme-default/index.css'
 import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
+import Toast from './toast.js'
 // import './../static/css/globleCss.css'
 import VueI18n from 'vue-i18n'
 import langs from './vueI18/locale'
@@ -16,8 +18,10 @@ Vue.use(VueRouter)
 Vue.use(ElementUI)
 Vue.use(VueI18n)
 Vue.use(VueResource)
+Vue.use(Toast)
+Vue.component('promptBox', prompt)
 // 多语言处理
-
+console.log(Toast)
 const navLang = navigator.language // 检测系统语言
 // const localLang = (navLang === 'zh-CN' || navLang === 'en-US') ? navLang : false
 var localLang = ''
