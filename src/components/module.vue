@@ -104,6 +104,7 @@
     mounted: function () {
       console.log(this.$msg)
       this.$msg('你好！')
+      console.log('ceshi')
     },
     methods: {
       changImg: function () {
