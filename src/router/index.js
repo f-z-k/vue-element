@@ -13,6 +13,7 @@ const cropper = r => require.ensure([], () => r(require('@/components/cropper/cr
 export default [
   {
     path: '/layout',
+    redirect: '/',
     component: layout,
     children: [
       {
@@ -53,10 +54,10 @@ export default [
       }
     ]
   },
-  {
-    path: '/',
-    redirect: '/layout/module'
-  },
+  // {
+  //   path: '/',
+  //   redirect: '/layout/module'
+  // },
   {
     path: '/form',
     component: form

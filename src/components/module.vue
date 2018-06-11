@@ -81,7 +81,9 @@
         <div>config.js 项目中的配置信息</div>
       </li>
       <li>
+        <router-link to="/layout/table">
         <div>static</div>
+        </router-link>
         <div>项目中的静态资源js\img\css</div>
       </li>
     </ol>
@@ -92,12 +94,16 @@
   export default {
     data: function () {
       return {
-        url: require('./../../static/img/lang-icon-0.png')
+        // url: require('./../../static/img/lang-icon-0.png')
+        index: 0
       }
     },
     components: {
     },
     computed: {
+      url () {
+        return require('./../../static/img/lang-icon-' + this.index + '.png')
+      }
     },
     watch: {
     },
@@ -107,8 +113,9 @@
     },
     methods: {
       changImg: function () {
-        var num = 1
-        this.url = require('./../../static/img/lang-icon-' + num + '.png')
+        // var num = 1
+        // this.url = require('./../../static/img/lang-icon-' + num + '.png')
+        this.index = 1
       }
     }
   }

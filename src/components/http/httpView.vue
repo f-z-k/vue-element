@@ -5,7 +5,7 @@
   <div>我的个人信息{{ userName }}</div>
 </template>
 <script>
-  import { getUserInfo } from './../../api/api'
+  import { getInfo } from './../../api/api'
   export default {
     data: function () {
       return {
@@ -19,10 +19,9 @@
     watch: {
     },
     mounted: function () {
-      // console.log(getUserInfo)
-      getUserInfo().then(data => {
+      getInfo().then(data => {
+        console.log('======')
         console.log(data)
-        this.userName = data.name
       })
       // var _this = this
       // getUserInfo().then(function (data) {
